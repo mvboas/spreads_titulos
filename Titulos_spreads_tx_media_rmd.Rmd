@@ -1,0 +1,46 @@
+---
+title: "Relatório"
+author: "Marcelo Vilas Boas de Castro"
+date: "28 de outubro de 2020"
+output: html_document
+---
+
+# Gráficos
+
+```{r echo = F, results = F, message = F, warning = F}
+
+#setwd("C:\\Users\\User\\OneDrive")
+source("Titulos_spreads_tx_media_rmd.R")
+
+```
+
+## Taxas médias e spreads LTN e NTN-F
+
+```{r echo = F, results = F}
+
+graf_tx_ltn
+graf_spread_ltn
+graf_tx_ntn_f
+graf_spread_ntn_f
+
+```
+
+
+## LTN de diferentes vencimentos
+```{r echo = F}
+
+for(i in 1:length(lista_nomes_graficos_ltn)){
+  print(get(lista_nomes_graficos_ltn[i]))
+}
+
+```
+
+
+## NTN-F de diferentes vencimentos
+```{r echo = F}
+
+for(i in 1:length(lista_nomes_graficos_ntn_f)){
+  print(get(lista_nomes_graficos_ntn_f[i]))
+}
+
+```
